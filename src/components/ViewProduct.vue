@@ -70,7 +70,7 @@ export default {
       return (originalPrice * percentage) / 100;
     },
     [ADD_PRODUCT_TO_CART]() {
-      this.$store.commit("addProductToCart", { product: this.product });
+      this.$store.dispatch(ADD_PRODUCT_TO_CART, { product: this.product });
     },
   },
 };

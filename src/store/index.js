@@ -46,6 +46,10 @@ export default new Vuex.Store({
       payload.product.inStock--;
     },
   },
-  actions: {},
+  actions: {
+    [ADD_PRODUCT_TO_CART]({ commit }, payload) {
+      commit(ADD_PRODUCT_TO_CART, { product: payload.product });
+    },
+  },
   modules: {},
 });
